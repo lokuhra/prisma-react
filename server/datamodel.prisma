@@ -1,0 +1,11 @@
+type Zone {
+  id: ID! @unique
+  name: String! @unique
+  labels: [Label!]!
+}
+
+type Label {
+  id: ID! @unique
+  alias: String! @unique
+  zone: Zone!
+}

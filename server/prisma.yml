@@ -1,0 +1,10 @@
+endpoint: https://us1.prisma.sh/leandro-bernardi-40b895/panchos/dev
+datamodel: datamodel.prisma
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma
+
+hooks:
+  post-deploy:
+    - prisma generate
