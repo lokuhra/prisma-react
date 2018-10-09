@@ -1,6 +1,6 @@
 # MUTATIONS
 
-### Mutation:
+### Mutation create:
 
 ```
 mutation{

@@ -3782,6 +3782,11 @@ del@^3.0.0:
     pify "^3.0.0"
     rimraf "^2.2.8"
 
+delay-map@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/delay-map/-/delay-map-1.0.1.tgz#eb3d84596f1fa8e746e9e6553d22214c3431989c"
+  integrity sha512-GIzzw6wzcbNQPgks9yd5gajEU1d2YaKGb+qAd0sgouCebEJI7mW8cjRra9cQ5fYx6ieWzEVMQyVb70AhEgpVGg==
+
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
@@ -8807,6 +8812,11 @@ rambdax@^0.12.3:
   integrity sha512-IgmiILrUrGYmBOiTwcTauBPk6ChjDiF/MJfDvNR0C5tLDqaInM5mGHukIQ5vhfU6nG/TE2ZJMOWbNUgzL2dW4Q==
   dependencies:
     rambda "^1.2.2"
+
+ramda@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
+  integrity sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
 
 randomatic@^3.0.0:
   version "3.1.0"

@@ -29,9 +29,9 @@ export default {
         }
       }
     `,
-    CREATE_ZONA: gql`
-      mutation create(, $name: String!) {
-          createZona( name: $name) {
+    CREATE_ZONE: gql`
+      mutation createZone($name: String!) {
+          createZone( data: {name: $name}) {
               id
               name
           }

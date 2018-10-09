@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import Application from '../../components/Application'
-import Query from '../../components/Query'
+import Mutation from '../../components/Mutation'
 
 export default class index extends Component {
   render() {
     return (
       <div>
         <Application title={'titulo'}>
-          <Query />
+          <Mutation />
 
         </Application>
       </div>
