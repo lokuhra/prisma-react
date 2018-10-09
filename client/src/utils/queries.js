@@ -1,4 +1,4 @@
-import gql from 'graphql-tag'
+import gql from "graphql-tag";
 
 export default {
   query: {
@@ -11,14 +11,14 @@ export default {
         }
       }
     `,
-      GET_LABELS: gql`
-          query{
-              labels{
-                  id
-                  alias
-              }
-          }
-      `,
+    GET_LABELS: gql`
+      query {
+        labels {
+          id
+          alias
+        }
+      }
+    `
   },
   mutation: {
     UPDATE_PERSON: gql`
@@ -31,11 +31,23 @@ export default {
     `,
     CREATE_ZONE: gql`
       mutation createZone($name: String!) {
-          createZone( data: {name: $name}) {
-              id
-              name
-          }
+        createZone(data: { name: $name }) {
+          id
+          name
+        }
       }
-  `,
-},
-}
+    `,
+    CREATE_LABEL: gql`
+      mutation createLabel($alias: String!, $name: String!) {
+        createLabel(
+          data: { alias: $alias, zone: { connect: { name: $name } } }
+        ) {
+          alias
+          zone {
+            name
+          }
+        }
+      }
+    `
+  }
+};

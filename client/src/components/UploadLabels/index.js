@@ -1,11 +1,10 @@
-import React, {Component, Fragment} from "react";
+import React, { Component, Fragment } from "react";
 import { Button } from "rmwc";
 import papa from "papaparse";
 import { Mutation } from "react-apollo";
 import queries from "../../utils/queries";
 import { init, uniq } from "rambdax";
 import delayMap from "delay-map";
-import DevTools from "mobx-react-devtools";
 
 class UploadZona extends Component {
   state = {
@@ -24,33 +23,34 @@ class UploadZona extends Component {
   };
 
   render() {
-      const { data2Load } = this.state;
+    const { data2Load } = this.state;
     return (
-      <Mutation mutation={queries.mutation.CREATE_ZONE}>
-        {(createZone, { loading, error }) => (
+      <Mutation mutation={queries.mutation.CREATE_LABEL}>
+        {(createLabel, { loading, error }) => (
           <Fragment>
-              <input
-                  className={"mdc-button mdc-ripple-upgraded"}
-                  type="file"
-                  onChange={e => this.loadFile(e)}
-              />
+            <input
+              className={"mdc-button mdc-ripple-upgraded"}
+              type="file"
+              onChange={e => this.loadFile(e)}
+            />
             <Button
+              raised
+              theme="secondary-bg on-secondary"
               onClick={() =>
                 new delayMap(
                   data2Load,
-                  value => createZone({ variables: { name: value.ZONA } }),
+                  value => createLabel({ variables: { alias: value.ETIQUETA, name:value.ZONA } }),
                   {
-                    timeout: 150
+                    timeout: 1000
                   }
-                ).then(() => alert(`se cargaron ${data2Load.length} zonas`))
+                ).then(() => alert(`se cargaron ${data2Load.length} labels`))
               }
             >
-              Cargar
+              Cargar etiquetas
             </Button>
 
             {loading && <p>Loading...</p>}
             {error && <p>Error :( Please try again</p>}
-            <DevTools />
           </Fragment>
         )}
       </Mutation>
