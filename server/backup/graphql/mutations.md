@@ -12,7 +12,7 @@ mutation{
 ```
 
 
-### Mutation relational:
+### Mutation create relational:
 
 ```
 mutation {

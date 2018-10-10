@@ -1,34 +1,31 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import { observer, inject } from 'mobx-react'
+import { observer, inject } from "mobx-react";
 
-import routes from '../../utils/routes'
-import { Link } from 'buttermilk'
+import routes from "../../utils/routes";
+import { Link } from "buttermilk";
 
 import {
   Drawer,
   DrawerHeader,
   DrawerContent,
   DrawerTitle,
-  DrawerSubtitle,
-  ListItem,
-  List,
-} from 'rmwc'
+  DrawerSubtitle
+} from "@rmwc/drawer";
 
-@inject('drawerStore')
+import { ListItem, List } from "@rmwc/list";
+
+@inject("drawerStore")
 @observer
-
-
 class _Drawer extends Component {
   render() {
-      const LinkItems = () =>(
-          routes.map((item, i)=>
-              <Link key={i} href={item.path} className={"no-underline"}>
-                  <ListItem>{item.name}</ListItem>
-              </Link>
-          )
-      )
-    const { drawerStore } = this.props
+    const LinkItems = () =>
+      routes.map((item, i) => (
+        <Link key={i} href={item.path} className={"no-underline"}>
+          <ListItem>{item.name}</ListItem>
+        </Link>
+      ));
+    const { drawerStore } = this.props;
     return (
       <Drawer
         modal
@@ -41,11 +38,11 @@ class _Drawer extends Component {
         </DrawerHeader>
         <DrawerContent>
           <List>
-              <LinkItems />
+            <LinkItems />
           </List>
         </DrawerContent>
       </Drawer>
-    )
+    );
   }
 }
-export default _Drawer
+export default _Drawer;

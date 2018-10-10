@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Application from '../../components/Application'
+import Application from '../../components/Template'
 import Query from "../../components/Query"
 
 import { Typography, Elevation, Grid, GridCell, RMWCProvider } from 'rmwc'

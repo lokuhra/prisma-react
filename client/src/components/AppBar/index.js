@@ -6,22 +6,24 @@ import {
     SimpleTopAppBar
 } from 'rmwc'
 
+import TopAppBar from '@material/react-top-app-bar';
+import MaterialIcon from '@material/react-material-icon';
+
 @inject('drawerStore')
 @observer
 class AppBar extends Component {
-  render() {
-    const { drawerStore } = this.props;
-    return (
-        <SimpleTopAppBar
-            title={drawerStore.name}
-            navigationIcon={{ onClick: () => drawerStore.toggle() }}
-            actionItems={[
-                { onClick: () => console.log('Do Something'), use: 'file_download' },
-                { onClick: () => console.log('Do Something'), use: 'print' },
-                { onClick: () => console.log('Do Something'), use: 'bookmark' }
-            ]}
-        />
-    )
-  }
+    render() {
+        const { drawerStore } = this.props;
+        return (
+            <TopAppBar
+                title='Miami, FL'
+                navigationIcon={<MaterialIcon
+                    icon='menu'
+                    onClick={() => drawerStore.toggle() }
+                />}
+                actionItems={[<MaterialIcon key='item' icon='bookmark' />]}
+            />
+        )
+    }
 }
 export default AppBar

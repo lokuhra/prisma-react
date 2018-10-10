@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material/react-material-icon": "^0.5.0",
+    "@material/react-top-app-bar": "^0.5.0",
     "apollo-cache-inmemory": "^1.2.10",
     "apollo-client": "^2.4.2",
     "apollo-client-preset": "^1.0.8",
@@ -30,15 +32,17 @@
     "react-apollo": "^2.2.4",
     "react-app-rewired": "^1.6.2",
     "react-dom": "^16.5.2",
+    "react-headroom": "^2.2.4",
     "react-helmet": "^5.2.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
+    "react-textfit": "^1.1.0",
     "rmwc": "^3.0.4",
     "subscriptions-transport-ws": "^0.9.15"
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewiredbuild",
+    "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
   },

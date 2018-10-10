@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Application from "../../components/Application";
+import Application from "../../components/Template";
 import UploadZones from "../../components/UploadZones";
 import UploadLabels from "../../components/UploadLabels";
 
