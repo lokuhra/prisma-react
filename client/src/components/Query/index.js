@@ -20,7 +20,7 @@ const _Query = () => (
       return (
         <ListGroup>
           {data.labels.map(item => (
-            <ListItem key={item.id}>
+            <ListItem key={item.columnId}>
               <ListItemGraphic
                 icon="person"
                 style={{ backgroundColor: 'lightgray' }}

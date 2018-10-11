@@ -18,6 +18,7 @@ const _Helmet = ({ title }) => (
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+t" />
   </Helmet>
 )
 

@@ -11,6 +11,7 @@ import { getMainDefinition } from 'apollo-utilities'
 
 import './style/normalize.css'
 import './style/tailwind.css'
+
 import './style/material-components-web.css'
 import '@rmwc/data-table/data-table.css'
 

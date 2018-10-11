@@ -9,7 +9,7 @@ const Template = ({ title, children }) => (
     <Helmet title={title} />
     <AppBar />
     <Drawer />
-    <div className={"asd pt-4"}>{children}</div>
+    <div className={"pt-350 md\:pt-4"}>{children}</div>
   </Fragment>
 );
 
